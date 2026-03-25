@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DIV container TAg  - BOX :You can add ALL THE OTHER HTMLS TAGS - It Takes 100% Width  -->
+     <div style="background-color: beige;">
+     <h2>Menu</h2>
+     <p>Coffee </p>
+     <strong>$2.00</strong>
+     </div>
+
+     <div style="background-color: blueviolet;">
+     <h2>Review</h2>
+     <h3>It is a goood Place</h3>
+     <p>Kola ⭐</p>
+     </div>
+
+     <!-- SPAN Container - Required Amount of width -->
+      <p>Hello <span style="background-color: yellow;">Kola</span> How are you doing?</p>
+      
+      <button>Cart <span>0</span></button>
+
+      <img height="300" width="300" src="https://images.pexels.com/photos/292998/pexels-photo-292998.jpeg">
+    <span>💓</span>
+    </body>
+</html>
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Video - mp4 format -->
+
+    <video height="300" width="300" controls autoplay  loop >
+        <source src="https://www.pexels.com/download/video/5699539/" type="video/mp4">
+    </video>
+
+    <!-- Audio - Mp3 Format -->
+     <audio>
+        <source src="alec_koff-blues-ballad-487408.mp3" type="audio/mp3">
+     </audio>
+</body>
+</html>
+
+
+
+--------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input list="food">
+
+    <datalist id="food">
+        <option value="pizza"></option>
+        <option value="burger"></option>
+        <option value="pasta"></option>
+        <option value="coke"></option>
+        <option value="dessert"></option>
+        <option value="lunch"></option>  
+    </datalist>
+
+</body>
+</html>

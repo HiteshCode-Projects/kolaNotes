@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Chatbot Webinar</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0b0f;
+  color: white;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+  opacity: 0.8;
+  text-align: center;
+  max-width: 700px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chatbox {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.nav {
+  position: fixed;
+  bottom: 20px;
+}
+
+.nav button {
+  margin: 5px;
+}
+
+.fade-up {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- Slide 1 -->
+<div class="slide active">
+  <h1 class="fade-up">🚀 Build Your AI Chatbot</h1>
+  <p class="fade-up">In 2 Hours – No Coding Required</p>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+  <h1>🤖 What is a Chatbot?</h1>
+  <p>AI that talks like humans. Used in support, learning & apps.</p>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+  <h1>🎯 What You'll Build</h1>
+  <p>Chat UI + AI + Live Website 🚀</p>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+  <h1>🛠 Build UI</h1>
+  <p>Simple input + button = chatbot interface</p>
+</div>
+
+<!-- Slide 5 (Interactive Demo) -->
+<div class="slide">
+  <h1>🤖 Live Chatbot Demo</h1>
+
+  <div class="chatbox">
+    <div id="chat"></div>
+    <input id="input" placeholder="Ask something..." />
+    <button onclick="chat()">Send</button>
+  </div>
+
+  <p>⚡ This is a simulated chatbot demo</p>
+</div>
+
+<!-- Slide 6 -->
+<div class="slide">
+  <h1>🎨 Customize</h1>
+  <p>Make it Resume Bot / Study Bot / Funny Bot</p>
+</div>
+
+<!-- Slide 7 -->
+<div class="slide">
+  <h1>🌍 Deploy</h1>
+  <p>Use Vercel or Netlify → Get Live Link 🚀</p>
+</div>
+
+<!-- Slide 8 -->
+<div class="slide">
+  <h1>🏆 You Built This!</h1>
+  <p>Live AI Product + Portfolio Ready 💼</p>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+  <button onclick="prev()">⬅ Prev</button>
+  <button onclick="next()">Next ➡</button>
+</div>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+function next() {
+  if (index < slides.length - 1) index++;
+  showSlide(index);
+}
+
+function prev() {
+  if (index > 0) index--;
+  showSlide(index);
+}
+
+// Keyboard support
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") next();
+  if (e.key === "ArrowLeft") prev();
+});
+
+// Demo chatbot (fake AI for presentation)
+function chat() {
+  let input = document.getElementById("input").value;
+  let chatBox = document.getElementById("chat");
+
+  let reply = "🤖 AI: " + generateReply(input);
+
+  chatBox.innerHTML += "<p><b>You:</b> " + input + "</p>";
+  chatBox.innerHTML += "<p>" + reply + "</p>";
+}
+
+function generateReply(msg) {
+  if (msg.toLowerCase().includes("career"))
+    return "Focus on skills + projects 🚀";
+  if (msg.toLowerCase().includes("study"))
+    return "Break topics into small parts 📚";
+  return "That's interesting! Tell me more 😄";
+}
+</script>
+
+</body>
+</html>
