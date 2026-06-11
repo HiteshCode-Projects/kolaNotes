@@ -6,14 +6,18 @@
     <title>Document</title>
     <style>
 .products{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-                           /* repeat(No of Column - 12Maxmium No of Column  , Size of Column) */
-    gap: 20px;
-    background-color: aqua;
-    padding: 30px;
+   display: grid;
 
-                        } 
+
+   /* grid-template-columns: repeat(No of Column , Size of Column);  Maximum You can make 12 column*/
+   grid-template-columns: repeat( 12, 1fr);
+   gap: 20px;
+
+
+
+    background-color: aqua;
+    padding: 20px;
+}
 
 .box{
     background-color: peru;
