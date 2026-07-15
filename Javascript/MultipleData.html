@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Multiple Data
+
+        //1. ARRAY : Multiple Data of Diffrent Data Types in Js
+        // Symbol -  [ ] square bracket
+        // Rule : Index No(Position No of Data) Starts wih ZERO - O
+
+        var passengers = [ "John" , "Mike" , "Bob" , 1101 , true    ]
+        console.log(passengers)
+
+        //Access The Data through Index No
+        // ARRAYNAME[Index No]
+
+        console.log(passengers[2])
+        console.log(passengers[3])
+        console.log(passengers[5])
+
+
+        //2. Object - Collection of Data
+        // symbol - { } curly Bracket
+        // rule -  key(left):value(right)
+        
+        var passengerDetails1 = {
+          //key : value
+          name:"kola" ,
+          age:35,
+          sex:"male/female",
+          desitnation:"LA"
+
+        }
+
+         var passengerDetails2 = {
+          //key : value
+          name:"Ayush" ,
+          age:38,
+          sex:"male/female",
+          desitnation:"Hawai"
+
+        }
+
+    
+        //Access The Data - objectname.keyname
+        console.log(passengerDetails1.desitnation)
+
+
+        var mutipleobjectarray = [
+            {customername:"john" , country:"USA"},
+        
+            {customername:"Mike" , country:"Canada"},
+
+            {customername:"Bob" , country:"Australia"},
+        ]
+
+        console.log(mutipleobjectarray[1].country)
+
+
+
+
+
+
+        //Function - immportant - To do the task
+        // function keyword functionname() {   }
+
+        function greet(){
+            //body of function
+
+            console.log("Morning Kola")
+
+            //output as pop up msg
+            alert("Welcome To Js")
+
+        }
+
+        greet()   //call the function 
+
+
+ 
+
+    </script>
+</body>
+</html>
